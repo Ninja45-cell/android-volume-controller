@@ -116,9 +116,30 @@ python android_volume_controller.py
 
 ### Running the Application
 ```bash
-# Start the volume controller
+# Start the volume controller (normal mode)
 python android_volume_controller.py
+
+# Run with detailed debug information
+python android_volume_controller.py --verbose
+
+# Run in background mode (minimal output, errors only)
+python android_volume_controller.py --background
+
+# Show help and usage examples
+python android_volume_controller.py --help
+
+# Show version information
+python android_volume_controller.py --version
 ```
+
+### Command Line Options
+
+| Option | Description |
+|--------|-------------|
+| `--verbose`, `-v` | Enable verbose logging with debug information |
+| `--background` | Run in background mode with minimal console output |
+| `--help`, `-h` | Show help message and usage examples |
+| `--version` | Display version information |
 
 ## 🔧 Configuration
 

@@ -123,9 +123,30 @@ python android_volume_controller.py
 ### Uygulamayı Çalıştırma
 
 ```bash
-# Ses kontrolcüsünü başlat
+# Ses kontrolcüsünü başlat (normal mod)
 python android_volume_controller.py
+
+# Ayrıntılı debug bilgileri ile çalıştır
+python android_volume_controller.py --verbose
+
+# Arka plan modunda çalıştır (minimal çıktı, sadece hatalar)
+python android_volume_controller.py --background
+
+# Yardım ve kullanım örneklerini göster
+python android_volume_controller.py --help
+
+# Versiyon bilgisini göster
+python android_volume_controller.py --version
 ```
+
+### Komut Satırı Seçenekleri
+
+| Seçenek | Açıklama |
+|---------|----------|
+| `--verbose`, `-v` | Debug bilgileri ile ayrıntılı loglama etkinleştir |
+| `--background` | Minimal konsol çıktısı ile arka plan modunda çalıştır |
+| `--help`, `-h` | Yardım mesajı ve kullanım örneklerini göster |
+| `--version` | Versiyon bilgisini görüntüle |
 
 ## 🔧 Yapılandırma
 
